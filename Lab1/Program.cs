@@ -8,6 +8,7 @@ namespace Lab1{
         static void Main(string[] args)
         {              
             bool choice = true;
+            //Creating a menu for user to select an option
             while (choice){
                 Console.WriteLine("1 - Import Words from File");
                 Console.WriteLine("2 - Bubble Sort words");
@@ -83,6 +84,8 @@ namespace Lab1{
                 }
             }
 
+        //Private method to import words from a text file
+
             private static void importWords(){
            
                 using (StreamReader reader = new StreamReader("Words.txt")) {
@@ -102,6 +105,7 @@ namespace Lab1{
             return localWords;
         }
 
+        //Private method to pass a list as an argument and print the words on the console 
         private static void printList(List<string> words)
         {            
             if (words == null)
@@ -112,6 +116,7 @@ namespace Lab1{
             Console.WriteLine(singleW);
         }
 
+        //Private method to bubble sort a list
        private static IList<string> BubbleSort(IList<string> words)
         {
             String[] array = words.ToArray();
